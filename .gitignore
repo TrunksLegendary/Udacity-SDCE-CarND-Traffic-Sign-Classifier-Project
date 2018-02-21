@@ -4,4 +4,5 @@ data
 models
 *.swp
 *.p
-data*.
+dataset*.
+CheckpointSaves*.
