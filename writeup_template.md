@@ -1,10 +1,6 @@
 # **Traffic Sign Recognition** 
 
-# REPLACE _ RERUN_TESTS
-
-## Writeup
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+## Image Classification Writup
 
 ---
 
@@ -24,11 +20,17 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[Sign1]: ./test_images/1.png "Traffic Sign 1"
+[Sign2]: ./test_images/2.png "Traffic Sign 2"
+[Sign3]: ./test_images/3.png "Traffic Sign 3"
+[Sign4]: ./test_images/4.png "Traffic Sign 4"
+[Sign5]: ./test_images/5.png "Traffic Sign 5"
+[Sign6]: ./test_images/6.png "Traffic Sign 5"
+[exm1]: ./examples/17a.png "example Sign"
+[exm2]: ./examples/17b.png "example processed"
+[exm3]: ./examples/17c.png "example rotate"
+[barchart]: ./examples/TrainingSetDistribution.png "Training set Distribution"
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -38,7 +40,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+The Project Write-up and the rest ofthe projecty code can be found on my Github, link here -->  [project report code](https://github.com/TrunksLegendary/Udacity-SDCE-CarND-Traffic-Sign-Classifier-Project/blob/master/Udacity-SDCE-CarND-Traffic-Sign-Classifier-Project.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -47,40 +49,43 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set: 34799
+* The size of validation set: 4410
+* The size of test set: 12630
+* The shape of a traffic sign image: 32x32x3 
+* The number of unique classes/labels in the data set: 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing the distribution of the 43 traffic sign classes.
 
-![alt text][image1]
+![bar][barchart]
+
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, the image is converted  to grayscale because ...
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image before and after grayscaling. The inclusion of color did not improve the model performance,  the model actually performed better in grayscale. Also, the lower dimension of the images helped train the model faster.
 
-![alt text][image2]
+![alt text][exm1]
+![alt text][exm2]
 
-As a last step, I normalized the image data because ...
+As a last step, the image data was normalized in order to prevent my gradient from going out control in such wide pixel range. This will help avoid my model getting stuck in local minima when I use a single, global learning rate.
 
-I decided to generate additional data because ... 
+The images were loaded from pickled data divided into training, validation, and testing data. The number of images were 34799, 4410, and 12630, respectively. 
 
-To add more data to the the data set, I used the following techniques because ... 
+Additional data was generated because many classes are significantly under-represented as seen in the distriution plot above. To add more data to the the data set, images with random rotations were added.
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text][exm1]
+![alt text][exm3]
+
 
 The difference between the original data set and the augmented data set is the following ... 
-
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -130,8 +135,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][Sign1] ![alt text][Sign2] ![alt text][Sign3] 
+![alt text][Sign4] ![alt text][Sign5] ![alt text][Sign6]
 
 The first image might be difficult to classify because ...
 
