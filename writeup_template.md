@@ -23,9 +23,9 @@ The goals / steps of this project are the following:
 [Sign1]: ./1.png "Traffic Sign 1"
 [Sign2]: ./2.png "Traffic Sign 1"
 [Sign3]: ./3.png "Traffic Sign 3"
-[Sign4]: ./test_images/4.png "Traffic Sign 4"
-[Sign5]: ./test_images/5.png "Traffic Sign 5"
-[Sign6]: ./test_images/6.png "Traffic Sign 6"
+[Sign4]: ./4.png "Traffic Sign 4"
+[Sign5]: ./5.png "Traffic Sign 5"
+[Sign6]: ./6.png "Traffic Sign 6"
 [exm1]: ./examples/17a.png "example Sign"
 [exm2]: ./examples/17b.png "example processed"
 [exm3]: ./examples/17c.png "example rotate"
@@ -158,13 +158,9 @@ Here are five German traffic signs that I found on the web:
 ![Traffic Sign 1][Sign1] 
 ![Traffic Sign 2][Sign2] 
 ![Traffic Sign 3][Sign3] 
-
-
+![Traffic Sign 5][Sign5] 
 ![Traffic Sign 4][Sign4] 
 ![Traffic Sign 6][Sign6]
-
-
-![Traffic Sign 5][Sign5] 
 
 I would expect the model to have a hard time classifying the sixth sign, which is for "Priority Road Work", as the landscape behind the sign on the lower part may blend into the sign itself.
 
