@@ -32,7 +32,7 @@ The goals / steps of this project are the following:
 [barchart]: ./examples/TrainingSetDistribution.png "Training set Distribution"
 [barchart2]: ./examples/TrainingSetDistribution-AUG.png "Training set Distribution"
 
-[sm1]: ./examples/SM1.png "SoftMax 1"
+[sm1]: https://raw.githubusercontent.com/TrunksLegendary/Udacity-SDCE-CarND-Traffic-Sign-Classifier-Project/master/test_images/1.PNG "SoftMax 1"
 [sm3]: ./examples/SM3.png "SoftMax 2"
 [sm12]: ./examples/SM12.png "SoftMax 3"
 [sm13]: ./examples/SM13.png "SoftMax 4"
