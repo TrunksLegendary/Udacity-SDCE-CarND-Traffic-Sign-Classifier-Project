@@ -155,8 +155,8 @@ I used the Lenet-5 architecture. The Lenet-5 architecture works well with classi
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][Sign1] ![alt text][Sign2] ![alt text][Sign3] 
-![alt text][Sign4] ![alt text][Sign5] ![alt text][Sign6]
+![Traffic Sign 1][Sign1] ![Traffic Sign 2][Sign2] ![Traffic Sign 3][Sign3] 
+![Traffic Sign 4][Sign4] ![Traffic Sign 5][Sign5] ![Traffic Sign 6][Sign6]
 
 I would expect the model to have a hard time classifying the sixth sign, which is for "Priority Road Work", as the landscape behind the sign on the lower part may blend into the sign itself.
 
