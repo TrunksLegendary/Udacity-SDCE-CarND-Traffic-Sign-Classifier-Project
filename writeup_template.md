@@ -161,8 +161,10 @@ Here are five German traffic signs that I found on the web:
 
 
 ![Traffic Sign 4][Sign4] 
-![Traffic Sign 5][Sign5] 
 ![Traffic Sign 6][Sign6]
+
+
+![Traffic Sign 5][Sign5] 
 
 I would expect the model to have a hard time classifying the sixth sign, which is for "Priority Road Work", as the landscape behind the sign on the lower part may blend into the sign itself.
 
